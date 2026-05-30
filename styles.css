@@ -215,6 +215,28 @@ section { padding: 6rem 0; }
   gap: 0.5rem;
 }
 
+.project-thumb {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin-bottom: 0.75rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.project-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project:hover .project-thumb {
+  border-color: var(--accent);
+}
+
 .project-year {
   font-family: var(--mono);
   font-size: 0.8125rem;
@@ -630,6 +652,8 @@ footer a:hover { color: var(--accent); }
   }
 
   .project:hover { padding-left: 0; }
+
+  .project-thumb { max-width: 100%; margin-bottom: 0.5rem; }
 
   .about-grid {
     grid-template-columns: 1fr;
