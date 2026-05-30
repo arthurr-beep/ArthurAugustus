@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Attercop — Arthur Augustus</title>
+<meta name="description" content="Via James Chase, full-stack ownership of Pangolin AI — the RAG platform behind Attercop's 24/7 Digital Analyst: identity bridge, indexing pipeline, streaming orchestrator, and observability." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="container">
+    <nav>
+    <a href="../index.html" class="logo">Arthur Augustus</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  </div>
+</header>
+
+<div class="container-narrow">
+
+  <section class="case-hero">
+    <a class="back-link" href="../index.html#work">All work</a>
+
+    <div class="case-meta-row">
+      <span>Company<strong>James Chase</strong></span>
+      <span>Client<strong>Attercop</strong></span>
+      <span>Product<strong>24/7 Digital Analyst (Pangolin AI)</strong></span>
+      <span>Role<strong>Engineer · full-stack ownership</strong></span>
+      <span>Period<strong>January 2026 — Present</strong></span>
+      <span>Type<strong>Consulting · RAG / agentic Q&amp;A</strong></span>
+    </div>
+
+    <h1>The <em>24/7 Digital Analyst</em></h1>
+    <p class="case-lead">Embedded with Attercop through James Chase to build Pangolin AI from the ground up — a RAG Q&amp;A platform that grounds answers in proprietary analyst research, streams through an agentic LangGraph orchestrator, and ships with enterprise identity, indexing, and observability baked in.</p>
+
+    <div class="case-tags">
+      <span class="tag">FastAPI</span>
+      <span class="tag">LangGraph</span>
+      <span class="tag">Celery</span>
+      <span class="tag">RAG</span>
+      <span class="tag">React</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Redis</span>
+      <span class="tag">Azure</span>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="metrics">
+      <div><div class="metric-value">4</div><div class="metric-label">Core platform layers delivered</div></div>
+      <div><div class="metric-value">~50K</div><div class="metric-label">Lines authored on services I owned</div></div>
+      <div><div class="metric-value">24/7</div><div class="metric-label">Analyst-grade Q&amp;A for customers</div></div>
+    </div>
+
+
+    <h2>The product</h2>
+      <p>Attercop's <strong>24/7 Digital Analyst</strong> is a Q&amp;A experience backed by <strong>Pangolin AI</strong>. It ingests CMS research into vector and structured indexes, retrieves and reranks under per-customer entitlement rules, runs a streaming agentic orchestrator that fans across unstructured retrieval and Text2SQL tools, and returns answers to a React UI with inline citations.</p>
+      <p>Identity, billing, and access flow through an external Identity Platform (VIP) and a CMS-backed provider (Sitefinity). I owned end-to-end design and delivery across the services I touched — backend, infrastructure, and selected frontend work.</p>
+
+      <h2>What I built</h2>
+
+      <h3>Identity bridge (Sitefinity ↔ VIP ↔ Pangolin)</h3>
+      <ul>
+        <li>Built Pangolin's auth layer end-to-end: Sitefinity opaque-token introspection → VIP <code>/resolve</code> → per-tenant session caching in Redis.</li>
+        <li>Two-layer cache (L1 token, L2 session) with TTL tuned so token top-ups reflect in under ~30 seconds — without hammering VIP on every request.</li>
+        <li>Three-state access model so token-exhausted users get read-only UI instead of a hard 403 that cleared tokens and looped the SDK through redirect.</li>
+        <li>Fixed the blocked-user redirect loop by separating authentication errors from authorisation errors and adding a deterministic <code>/auth/status</code> poll plus a no-access page that makes zero further API calls.</li>
+      </ul>
+
+      <h3>Indexing pipeline</h3>
+      <ul>
+        <li>Celery + RabbitMQ workflow with separate IO, CPU, and image worker fleets — orchestrate → fetch → chunk → embed (batched cross-document) → vision-LLM enrichment → upsert.</li>
+        <li>DLQ on every stage with per-stage retry policies; idempotency via watermarks and integrity checks after upsert.</li>
+        <li>Cross-document embedding batching cut average API latency per chunk by roughly 6× versus single-document batching.</li>
+      </ul>
+
+      <h3>Streaming orchestrator &amp; observability</h3>
+      <ul>
+        <li>Stream-publisher primitives bridging LangGraph nodes to Atterchat SSE — including an inline-marker parser that strips <code>[N]</code> from the wire while preserving markers for persistence.</li>
+        <li>OTel + Langfuse traces nested under LangGraph node spans; prompt-version provenance carried through every chain.</li>
+        <li>Citation reload and historical markers: hydration endpoints so conversation reload repopulates citations and splices inline chips from Pangolin's marker-bearing answers — not Atterchat's marker-free message store.</li>
+      </ul>
+
+      <h3>Platform hygiene</h3>
+      <ul>
+        <li>OpenAPI and Celery task-reference generators that walk the live FastAPI route graph and task registry, with a <code>--check</code> flag for CI so the public surface stays diff-reviewable.</li>
+        <li>Access-state UX: read-only mode for token-exhausted users and frontend state machines that respect the three dependency variants on write vs read paths.</li>
+      </ul>
+
+      <h2>Constraints I designed for</h2>
+      <ul>
+        <li><strong>External dependencies on the critical path.</strong> Sitefinity and VIP sit on different teams and release cadences — defensive Pydantic boundaries, null-tolerant payload models, and stale-fallback on VIP outage so partner issues don't surface as hard errors for users.</li>
+        <li><strong>Polyglot scope.</strong> Features like read-only mode spanned Python (FastAPI, Redis TTL behaviour), TypeScript (access-gate state machine, polling), and SSE handler invariants — one feature, three surfaces.</li>
+        <li><strong>Two systems, one conversation.</strong> Atterchat owns message metadata; Pangolin owns citations and marker-bearing answers. The fix for historical reload was overlay at render time from the source of truth — not double-writing into Atterchat.</li>
+      </ul>
+
+    <div class="pull-quote">"Build clean boundaries between the systems you don't control — Sitefinity, VIP, Atterchat — and the system you do. Most of the bugs came from leaky boundaries; most of the fixes came from making them explicit."</div>
+  </section>
+
+  <section class="next-case">
+    <div class="next-case-label">Next case study</div>
+    <a href="digital-composite.html">
+      <h3>Global data privacy search at Digital Composite</h3>
+      <span class="next-case-arrow">→</span>
+    </a>
+  </section>
+
+</div>
+
+<div class="container">
+  <footer>
+    <span>© 2026 Arthur Augustus</span>
+    <span><a href="../index.html#contact">arthurraugustus@gmail.com</a></span>
+  </footer>
+</div>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+</script>
+
+</body>
+</html>

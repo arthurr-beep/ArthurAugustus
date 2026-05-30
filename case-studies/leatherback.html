@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Leatherback — Arthur Augustus</title>
+<meta name="description" content="Owned the notifications microservice and secure transaction APIs through pilot launch of the platform. Lifted customer engagement by 35% and became the project's expert and go-to reviewer." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="container">
+    <nav>
+    <a href="../index.html" class="logo">Arthur Augustus</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  </div>
+</header>
+
+<div class="container-narrow">
+
+  <section class="case-hero">
+    <a class="back-link" href="../index.html#work">All work</a>
+
+    <div class="case-meta-row">
+      <span>Company<strong>Leatherback (London)</strong></span>
+      <span>Role<strong>Senior Software Engineer (Backend)</strong></span>
+      <span>Period<strong>November 2020 — April 2021</strong></span>
+      <span>Type<strong>Contract · Fintech / Payments</strong></span>
+    </div>
+
+    <h1>Notifications and secure transactions for <em>v1 launch</em></h1>
+    <p class="case-lead">Owned the notifications microservice and secure transaction APIs through pilot launch of the platform. Lifted customer engagement by 35% and became the project's expert and go-to reviewer.</p>
+
+    <div class="case-tags">
+      <span class="tag">.NET Core</span>
+      <span class="tag">C#</span>
+      <span class="tag">RabbitMQ</span>
+      <span class="tag">MassTransit</span>
+      <span class="tag">Twilio-SendGrid</span>
+      <span class="tag">AES</span>
+      <span class="tag">bcrypt</span>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="metrics">
+      <div><div class="metric-value">35%</div><div class="metric-label">Lift in customer engagement</div></div>
+      <div><div class="metric-value">v1</div><div class="metric-label">Pilot launch shipped</div></div>
+      <div><div class="metric-value">OWASP</div><div class="metric-label">Top 10 awareness applied throughout</div></div>
+    </div>
+
+
+    <h2>The brief</h2>
+      <p>Leatherback (Rexelpay) was launching a UK-based fintech platform — virtual accounts, onboarding, transactions, fund exchange — and needed someone to own the cross-cutting services that everything else depended on.</p>
+
+      <h2>What I built</h2>
+
+      <h3>The notifications backbone</h3>
+      <ul>
+        <li>Took ownership of the notifications microservice, written in C# and .NET Core. Used consumer / request-response strategies in MassTransit as a connector for RabbitMQ to communicate between services.</li>
+        <li>Integrated Twilio-SendGrid for messaging capabilities across OTP, info exchange, and customer communications — boosting customer engagement by 35%.</li>
+        <li>Became the project expert for the notifications service, handling inquiries and improvement suggestions across teams.</li>
+      </ul>
+
+      <h3>Secure transactions</h3>
+      <ul>
+        <li>Designed and maintained transaction APIs alongside the digital banking team. Used Blowfish cipher (via bcrypt) for one-way hashing of transaction PINs.</li>
+        <li>Applied Rijndael (AES) encryption for OTP and security-question two-way encryption.</li>
+        <li>Designed APIs following SOLID principles with isolation of Presentation, Core, and Infrastructure layers, and CQRS for data flow isolation.</li>
+      </ul>
+
+      <h3>Pilot launch and security culture</h3>
+      <ul>
+        <li>Led the pilot phase for v1 of the platform — virtual accounts, onboarding, transactions, and fund exchange — in close collaboration with the engineering team.</li>
+        <li>Maintained extensive understanding of the OWASP Top 10, consistently identifying and mitigating web app security risks.</li>
+        <li>Evaluated security implications of pull requests and architectural decisions during code reviews.</li>
+      </ul>
+
+    <div class="pull-quote">"Security work mostly looks like saying no in code review. Done right, nobody notices and nothing happens."</div>
+  </section>
+
+  <section class="next-case">
+    <div class="next-case-label">Next case study</div>
+    <a href="stanbic-ibtc.html">
+      <h3>SSO and integration for the Stanbic Super App</h3>
+      <span class="next-case-arrow">→</span>
+    </a>
+  </section>
+
+</div>
+
+<div class="container">
+  <footer>
+    <span>© 2026 Arthur Augustus</span>
+    <span><a href="../index.html#contact">arthurraugustus@gmail.com</a></span>
+  </footer>
+</div>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+</script>
+
+</body>
+</html>

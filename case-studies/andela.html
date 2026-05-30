@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Andela — Arthur Augustus</title>
+<meta name="description" content="As an Andela engineer on the Morgan & Morgan engagement, built document-aware AI so trial lawyers could interact with case files via OpenAI GPT and LangChain — integrated with Docrio, Salesforce, and S3." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="container">
+    <nav>
+    <a href="../index.html" class="logo">Arthur Augustus</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  </div>
+</header>
+
+<div class="container-narrow">
+
+  <section class="case-hero">
+    <a class="back-link" href="../index.html#work">All work</a>
+
+    <div class="case-meta-row">
+      <span>Company<strong>Andela</strong></span>
+      <span>Client<strong>Morgan &amp; Morgan (USA)</strong></span>
+      <span>Role<strong>Software Engineer</strong></span>
+      <span>Period<strong>April 2023 — May 2023</strong></span>
+      <span>Type<strong>Client engagement · Legal Tech</strong></span>
+    </div>
+
+    <h1>GenAI for trial lawyers at <em>Morgan &amp; Morgan</em></h1>
+    <p class="case-lead">Embedded with Andela on a Morgan &amp; Morgan engagement — building document-aware AI so one of America's largest trial law firms could query case files through OpenAI GPT and LangChain, integrated with Docrio, Salesforce, and S3.</p>
+
+    <div class="case-tags">
+      <span class="tag">LangChain</span>
+      <span class="tag">OpenAI GPT</span>
+      <span class="tag">Pinecone</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">Salesforce</span>
+      <span class="tag">AWS S3</span>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="metrics">
+      <div><div class="metric-value">3</div><div class="metric-label">Enterprise systems integrated (Docrio, Salesforce, S3)</div></div>
+      <div><div class="metric-value">RAG</div><div class="metric-label">Pattern applied to legal documents</div></div>
+      <div><div class="metric-value">Client</div><div class="metric-label">Morgan &amp; Morgan · via Andela</div></div>
+    </div>
+
+
+    <h2>The engagement</h2>
+      <p>Andela placed engineers directly into client teams. I joined Morgan &amp; Morgan — a national trial-law firm — to explore whether GPT-class models, grounded in the firm's own case documents, could turn hours of file review into a focused conversation.</p>
+      <p>The work sat at the intersection of legal operations, enterprise integrations, and early production GenAI: ship something lawyers could trust, inside systems the firm already ran on.</p>
+
+      <h2>What I built</h2>
+
+      <h3>Law case chatbot</h3>
+      <ul>
+        <li>Designed and developed Python/Go APIs and data pipelines that transformed how case documents were processed for the client.</li>
+        <li>Built a Law Case Chatbot so lawyers could interact with case files — OpenAI GPT with LangChain document loaders, retrieval grounded in firm-owned content.</li>
+        <li>Integrated with Docrio, Salesforce, and AWS S3, fitting into Morgan &amp; Morgan's existing tooling rather than asking the firm to rip and replace.</li>
+      </ul>
+
+      <h3>Retrieval and session infrastructure</h3>
+      <ul>
+        <li>Developed vector embedding pipelines with Pinecone, optimizing cosine similarity search for case-specific context at query time.</li>
+        <li>Wired retrieval so the model received relevant case material alongside each user question — reducing generic answers on sensitive legal work.</li>
+        <li>Coordinated session management with FastAPI, AWS DynamoDB, and Redis for secure, repeatable interactions across the chat experience.</li>
+      </ul>
+
+    <div class="pull-quote">"Short engagement, sharp deliverable — embedded with the client through Andela. The goal wasn't to replace anyone; it was to give lawyers their afternoons back."</div>
+  </section>
+
+  <section class="next-case">
+    <div class="next-case-label">Next case study</div>
+    <a href="bellhop.html">
+      <h3>High-throughput booking platform APIs</h3>
+      <span class="next-case-arrow">→</span>
+    </a>
+  </section>
+
+</div>
+
+<div class="container">
+  <footer>
+    <span>© 2026 Arthur Augustus</span>
+    <span><a href="../index.html#contact">arthurraugustus@gmail.com</a></span>
+  </footer>
+</div>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NewsCorp — Arthur Augustus</title>
+<meta name="description" content="Production Python/Go APIs for GenAI use cases at WSJ — LLM evaluation, vector retrieval, session management, and a pioneering screen-reader experiment to make articles accessible." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="container">
+    <nav>
+    <a href="../index.html" class="logo">Arthur Augustus</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  </div>
+</header>
+
+<div class="container-narrow">
+
+  <section class="case-hero">
+    <a class="back-link" href="../index.html#work">All work</a>
+
+    <div class="case-meta-row">
+      <span>Company<strong>NewsCorp (USA)</strong></span>
+      <span>Role<strong>Lead Consultant Engineer</strong></span>
+      <span>Period<strong>May 2023 — January 2024</strong></span>
+      <span>Type<strong>Consulting · Generative AI</strong></span>
+    </div>
+
+    <h1>Generative AI for the <em>Wall Street Journal</em></h1>
+    <p class="case-lead">Production Python/Go APIs for GenAI use cases at WSJ — LLM evaluation, vector retrieval, session management, and a pioneering screen-reader experiment to make articles accessible.</p>
+
+    <div class="case-tags">
+      <span class="tag">LLMs</span>
+      <span class="tag">Falcon</span>
+      <span class="tag">LLaMA</span>
+      <span class="tag">Pinecone</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">DynamoDB</span>
+      <span class="tag">Accessibility</span>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="metrics">
+      <div><div class="metric-value">4</div><div class="metric-label">Major LLMs evaluated for production</div></div>
+      <div><div class="metric-value">3</div><div class="metric-label">Vector stores benchmarked</div></div>
+      <div><div class="metric-value">1st</div><div class="metric-label">WSJ screen-reader experiment for accessibility</div></div>
+    </div>
+
+
+    <h2>The brief</h2>
+      <p>NewsCorp wanted to move generative AI from research demos into production capabilities for the Wall Street Journal — document understanding, retrieval-augmented generation, and session-aware AI interactions that could meet real production SLAs.</p>
+
+      <h2>What I built</h2>
+
+      <h3>LLM evaluation and selection</h3>
+      <ul>
+        <li>Led the design and development of Python/Go APIs tailored to Generative AI business use cases including document understanding and retrieval-augmented generation.</li>
+        <li>Evaluated and benchmarked multiple LLMs — Raven, Falcon7b, LLaMA, and CodeLLaMA — assessing latency, cost, output stability, and hallucination risk for real-world deployment.</li>
+        <li>Conducted innovative experiments with fine-tuning open-source LLMs and diffusion models (Stable Diffusion), exploring the memory-efficient LoRA technique.</li>
+      </ul>
+
+      <h3>Retrieval systems for production</h3>
+      <ul>
+        <li>Designed vector-based retrieval systems using Pinecone, FAISS, and ChromaDB, implementing cosine similarity and retrieval strategies aligned with production SLAs.</li>
+        <li>Pioneered the use of cosine similarity search techniques for efficient data retrieval and state-of-the-art RAG.</li>
+      </ul>
+
+      <h3>Session-aware AI services</h3>
+      <ul>
+        <li>Built FastAPI services with DynamoDB-backed session state, supporting long-running AI interactions.</li>
+        <li>Deployed microservices using ECS, GitHub Actions, and Lambda functions to take processing off the core API server.</li>
+        <li>Wrote unit and integration tests to validate AI pipelines and prevent silent regressions.</li>
+      </ul>
+
+      <h3>Accessibility experimentation</h3>
+      <ul>
+        <li>Led the first experimentation for screen reading of Wall Street Journal articles, aimed at helping users with disabilities engage with WSJ content.</li>
+      </ul>
+
+    <div class="pull-quote">"The fun part of LLM work in production isn't the model. It's the dozen unglamorous services around it that decide whether the model ever gets to do anything useful."</div>
+  </section>
+
+  <section class="next-case">
+    <div class="next-case-label">Next case study</div>
+    <a href="andela.html">
+      <h3>GenAI for Morgan &amp; Morgan at Andela</h3>
+      <span class="next-case-arrow">→</span>
+    </a>
+  </section>
+
+</div>
+
+<div class="container">
+  <footer>
+    <span>© 2026 Arthur Augustus</span>
+    <span><a href="../index.html#contact">arthurraugustus@gmail.com</a></span>
+  </footer>
+</div>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+</script>
+
+</body>
+</html>

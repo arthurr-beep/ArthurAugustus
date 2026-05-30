@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bellhop — Arthur Augustus</title>
+<meta name="description" content="Event-driven Go and Python services powering b2b booking flows for a US-based moving and logistics platform. GraphQL middleware, multi-stage Docker builds, and a 25% lift in back-office efficiency." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="container">
+    <nav>
+    <a href="../index.html" class="logo">Arthur Augustus</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  </div>
+</header>
+
+<div class="container-narrow">
+
+  <section class="case-hero">
+    <a class="back-link" href="../index.html#work">All work</a>
+
+    <div class="case-meta-row">
+      <span>Company<strong>Bellhop (USA)</strong></span>
+      <span>Role<strong>Platform Engineer (Consultant)</strong></span>
+      <span>Period<strong>September 2021 — January 2023</strong></span>
+      <span>Type<strong>Consulting · Platform Engineering</strong></span>
+    </div>
+
+    <h1><em>High-throughput</em> booking platform APIs</h1>
+    <p class="case-lead">Event-driven Go and Python services powering b2b booking flows for a US-based moving and logistics platform. GraphQL middleware, multi-stage Docker builds, and a 25% lift in back-office efficiency.</p>
+
+    <div class="case-tags">
+      <span class="tag">Go</span>
+      <span class="tag">Python</span>
+      <span class="tag">GraphQL</span>
+      <span class="tag">SQS/SNS</span>
+      <span class="tag">Docker</span>
+      <span class="tag">Kubernetes</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">DynamoDB</span>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="metrics">
+      <div><div class="metric-value">25%</div><div class="metric-label">Improvement in back-office operations efficiency</div></div>
+      <div><div class="metric-value">2</div><div class="metric-label">Languages and 5+ frameworks shipped</div></div>
+      <div><div class="metric-value">Event-driven</div><div class="metric-label">Architecture for customer-pro flow</div></div>
+    </div>
+
+
+    <h2>The platform</h2>
+      <p>Bellhop operates booking and logistics services at scale, with b2b customers depending on real-time integration with the core booking system. The platform team owned the APIs that sat between everything.</p>
+
+      <h2>What I built</h2>
+
+      <h3>High-performance APIs in Go and Python</h3>
+      <ul>
+        <li>Designed and implemented high-performance APIs in Go and Python using frameworks including Echo, Gin, FastAPI, and Django, supporting large-scale business-critical booking operations.</li>
+        <li>Architected APIs in Go using multithreading, design patterns, goroutines, and channels.</li>
+        <li>Built robust Go APIs for handling large data volumes in PostgreSQL and DynamoDB, prioritizing performance optimization.</li>
+      </ul>
+
+      <h3>Event-driven and middleware patterns</h3>
+      <ul>
+        <li>Pioneered event-driven implementations through Amazon SQS/SNS for the customer-pro booking flow, handling real-time processing of large datasets with minimal latency.</li>
+        <li>Designed GraphQL APIs serving as critical middleware between b2b customers and the core booking system, improving system reliability.</li>
+        <li>Wrote Go Lambda functions for notifications handling.</li>
+      </ul>
+
+      <h3>Container and deployment hygiene</h3>
+      <ul>
+        <li>Containerized Python and Go APIs using Docker with multi-stage build patterns optimized for Kubernetes.</li>
+        <li>Designed REST APIs in Python3 for internal tooling solutions — Fast-API and Django applications that achieved a 25% improvement in back-office efficiency compared to the legacy CRM.</li>
+        <li>Documented and integrated third-party RESTful services using Postman and Swagger-UI.</li>
+      </ul>
+
+    <div class="pull-quote">"Platform engineering is a tax engineers pay so the product engineers above them get to feel fast."</div>
+  </section>
+
+  <section class="next-case">
+    <div class="next-case-label">Next case study</div>
+    <a href="leatherback.html">
+      <h3>Notifications and secure transactions for v1 launch</h3>
+      <span class="next-case-arrow">→</span>
+    </a>
+  </section>
+
+</div>
+
+<div class="container">
+  <footer>
+    <span>© 2026 Arthur Augustus</span>
+    <span><a href="../index.html#contact">arthurraugustus@gmail.com</a></span>
+  </footer>
+</div>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+</script>
+
+</body>
+</html>

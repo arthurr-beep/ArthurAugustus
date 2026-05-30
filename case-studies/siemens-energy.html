@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Siemens Energy — Arthur Augustus</title>
+<meta name="description" content="Agentic and RAG-based AI systems that reason over historical sensor data, thresholds, and alert patterns to make industrial monitoring smarter and safer." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="container">
+    <nav>
+    <a href="../index.html" class="logo">Arthur Augustus</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  </div>
+</header>
+
+<div class="container-narrow">
+
+  <section class="case-hero">
+    <a class="back-link" href="../index.html#work">All work</a>
+
+    <div class="case-meta-row">
+      <span>Company<strong>Siemens Energy</strong></span>
+      <span>Role<strong>Senior Engineer (Consultant)</strong></span>
+      <span>Period<strong>June 2024 — May 2025</strong></span>
+      <span>Type<strong>Consulting · Industrial AI</strong></span>
+    </div>
+
+    <h1>Self-aware alerting for <em>partial discharge & gas density</em></h1>
+    <p class="case-lead">Agentic and RAG-based AI systems that reason over historical sensor data, thresholds, and alert patterns to make industrial monitoring smarter and safer.</p>
+
+    <div class="case-tags">
+      <span class="tag">LLM Agents</span>
+      <span class="tag">RAG</span>
+      <span class="tag">Sensor Telemetry</span>
+      <span class="tag">Python</span>
+      <span class="tag">Alerting</span>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="metrics">
+      <div><div class="metric-value">3</div><div class="metric-label">Critical industrial systems instrumented</div></div>
+      <div><div class="metric-value">24/7</div><div class="metric-label">Monitoring with self-aware reasoning</div></div>
+      <div><div class="metric-value">Domain</div><div class="metric-label">Partial discharge + gas density</div></div>
+    </div>
+
+
+    <h2>The brief</h2>
+      <p>Industrial environments generate a firehose of telemetry — gas density readings, partial-discharge measurements, threshold breaches. Traditional rule-based alerting either drowns operators in false positives or misses the patterns that matter. Siemens Energy wanted to know whether agentic AI could change that.</p>
+
+      <h2>What I built</h2>
+
+      <h3>Agentic and RAG-based AI for safety-critical telemetry</h3>
+      <ul>
+        <li>Designed agentic and RAG-based AI systems for self-aware partial-discharge and gas-density alerting, combining real-time telemetry streams with LLM reasoning.</li>
+        <li>Implemented stateful workflows and decision logic enabling AI agents to reason over historical sensor data, thresholds, and alerts — not just react to the latest reading.</li>
+        <li>Built scalable ingestion and inference pipelines to transform raw sensor telemetry into actionable alerts using Python and modern LLM orchestration patterns.</li>
+      </ul>
+
+      <h3>Working with domain experts</h3>
+      <ul>
+        <li>Collaborated closely with Siemens domain experts to translate research concepts into deployable, maintainable systems.</li>
+        <li>Built new features leveraging telemetry data from sensors and designed a robust alerting system for when thresholds are hit.</li>
+        <li>Focused on auditability — operators need to understand <em>why</em> an AI agent raised an alert, not just that it did.</li>
+      </ul>
+
+    <div class="pull-quote">"In industrial settings, an unexplained alert is worse than no alert. Auditability isn't a feature — it's the product."</div>
+  </section>
+
+  <section class="next-case">
+    <div class="next-case-label">Next case study</div>
+    <a href="microsoft.html">
+      <h3>Powering Windows sustainability at billion-device scale</h3>
+      <span class="next-case-arrow">→</span>
+    </a>
+  </section>
+
+</div>
+
+<div class="container">
+  <footer>
+    <span>© 2026 Arthur Augustus</span>
+    <span><a href="../index.html#contact">arthurraugustus@gmail.com</a></span>
+  </footer>
+</div>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+</script>
+
+</body>
+</html>
